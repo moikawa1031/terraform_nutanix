@@ -1,3 +1,6 @@
+#URL
+#https://registry.terraform.io/providers/nutanix/nutanix/latest
+
 terraform {
   required_providers {
     nutanix = {
