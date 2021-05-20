@@ -25,10 +25,18 @@ resource "nutanix_virtual_machine" "vm" {
   num_sockets          = 1
   memory_size_mib      = 2048
 
+#admin@NTNX-SGH103SLF3-A-CVM:192.168.51.22:~$ acli net.list
+#Network name  Network UUID                          Type      Identifier  Subnet
+#vlan_51       6718a9c7-a32a-4cfc-9b03-cd11bb2e2336  kBridged  0           192.168.51.0/24
+  
   nic_list {
       subnet_uuid = "6718a9c7-a32a-4cfc-9b03-cd11bb2e2336"
   }
 
+#admin@NTNX-SGH103SLF3-A-CVM:192.168.51.22:~$ acli image.list
+#Image name   Image type  Image UUID
+#CentOS7      kDiskImage  fc7a1647-4a18-4a09-b640-2cdd41da6b2a
+  
   disk_list {
     data_source_reference = {
       kind = "image"
