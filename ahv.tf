@@ -9,7 +9,7 @@ terraform {
 
 provider "nutanix" {
   username = "admin"
-  password = "Peg-12345!"
+  password = "xxxxxx"
   endpoint = "192.168.51.20"
   insecure = true
   port     = 9440
